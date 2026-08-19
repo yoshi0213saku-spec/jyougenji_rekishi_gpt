@@ -1,104 +1,682 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>常源寺・時を超えて｜モバイル版</title>
-<style>
-:root{--bg:#f6f2e8;--card:#fffdf8;--ink:#25251f;--muted:#6c6a61;--accent:#745f37;--accent2:#283b2d;--line:#ded6c6;--gold:#b39052}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.75}a{color:inherit;text-decoration:none}button{font:inherit}
-.wrap{max-width:680px;margin:auto;padding:0 16px}.top-visual{margin:0;background:#111}.top-visual img{display:block;width:100%;height:auto;max-width:100%;margin:0 auto}.top-jump{max-width:680px;margin:0 auto;padding:12px 16px 0;text-align:center}.top-jump a{display:inline-block;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--accent2);font-size:.88rem;font-weight:700}.scroll{display:inline-block;margin-top:16px;padding:10px 14px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:rgba(0,0,0,.18)}
-.intro{padding:30px 0 10px}.lead{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:1.18rem;line-height:1.9;margin:0 0 14px}.disclosure{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin:12px 0 28px}.disclosure summary{cursor:pointer;padding:14px 0;font-weight:700;color:var(--accent2)}.disclosure p{font-size:.91rem;color:var(--muted)}
-.section{padding:28px 0}.section h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:1.45rem;margin:0 0 6px}.sub{color:var(--muted);font-size:.9rem;margin:0 0 18px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:12px}.quick a{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 14px;min-height:118px;box-shadow:0 4px 16px rgba(63,48,27,.05)}.quick strong{display:block;font-size:1rem;margin-top:7px}.quick span{display:block;color:var(--muted);font-size:.8rem;margin-top:4px}.ico{font-size:1.55rem}
-.timeline{position:relative;margin:22px 0 0 8px;padding-left:26px;border-left:2px solid var(--gold)}.titem{position:relative;margin:0 0 24px}.titem:before{content:"";position:absolute;left:-33px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:3px solid var(--bg)}.year{font-weight:800;color:var(--accent);font-size:.88rem}.titem h3{margin:.1em 0;font-size:1.03rem}.titem p{margin:.25em 0;color:var(--muted);font-size:.88rem}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0}.tag{display:inline-block;border-radius:999px;padding:4px 9px;background:#ece6d8;color:var(--accent2);font-size:.74rem;font-weight:700}.card h3{font-size:1.03rem;margin:10px 0 6px}.card p{font-size:.88rem;color:var(--muted);margin:0 0 12px}.play{display:block;text-align:center;background:var(--accent2);color:white;padding:12px;border-radius:12px;font-weight:700}.secondary{background:transparent;color:var(--accent2);border:1px solid var(--accent2)}
-.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.photo-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;background:#ddd}.photo-placeholder{aspect-ratio:4/3;border-radius:10px;background:linear-gradient(135deg,#ddd4c3,#b9ad98);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.8rem}
-.notice{border-left:4px solid var(--gold);background:#fffaf0;padding:14px 15px;border-radius:10px;font-size:.86rem}.footer{margin-top:32px;background:#263126;color:#ece8dd;padding:34px 18px calc(34px + env(safe-area-inset-bottom));font-size:.82rem}.footer h2{font-size:1.05rem}.footer p{opacity:.86}.bottom-nav{position:sticky;bottom:0;z-index:20;background:rgba(255,253,248,.94);backdrop-filter:blur(9px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:6px max(8px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}.bottom-nav a{text-align:center;font-size:.72rem;padding:5px 2px}.bottom-nav b{display:block;font-size:1.1rem}@media(min-width:700px){.bottom-nav{display:none}.quick{grid-template-columns:repeat(4,1fr)}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#263126">
+  <meta name="description" content="南相木村・峰雄山常源寺の歴史と文化を、写真・音声・映像で紹介する個人制作のデジタルアーカイブです。">
+  <title>常源寺・時を超えて｜五百年の歴史と、未来へつなぐ祈り</title>
+
+  <style>
+    :root{
+      --bg:#f6f2e8;
+      --card:#fffdf8;
+      --ink:#25251f;
+      --muted:#6c6a61;
+      --green:#283b2d;
+      --brown:#745f37;
+      --gold:#b39052;
+      --line:#ded6c6;
+      --soft:#eee7d9;
+      --shadow:0 8px 24px rgba(63,48,27,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      line-height:1.75;
+      -webkit-text-size-adjust:100%;
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    img{max-width:100%}
+    .wrap{max-width:760px;margin:auto;padding:0 16px}
+    .serif{font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif}
+
+    /* トップ画像 */
+    .top-visual{
+      width:100%;
+      margin:0;
+      background:#111;
+      overflow:hidden;
+    }
+    .top-visual img{
+      display:block;
+      width:100%;
+      height:auto;
+      margin:0 auto;
+    }
+    .top-jump{
+      max-width:760px;
+      margin:0 auto;
+      padding:12px 16px 0;
+      text-align:center;
+    }
+    .top-jump a{
+      display:inline-block;
+      padding:10px 16px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:var(--card);
+      color:var(--green);
+      font-size:.9rem;
+      font-weight:800;
+      box-shadow:0 3px 12px rgba(0,0,0,.04);
+    }
+
+    /* 導入 */
+    .intro{padding:28px 0 8px}
+    .lead{
+      margin:0 0 14px;
+      font-size:1.14rem;
+      line-height:1.95;
+      font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+    }
+    .disclosure{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:0 16px;
+      margin:14px 0 24px;
+      box-shadow:0 4px 14px rgba(63,48,27,.04);
+    }
+    .disclosure summary{
+      cursor:pointer;
+      padding:15px 0;
+      font-weight:800;
+      color:var(--green);
+    }
+    .disclosure p{
+      margin:0 0 14px;
+      font-size:.92rem;
+      color:var(--muted);
+    }
+
+    /* セクション */
+    .section{padding:26px 0}
+    .section h2{
+      margin:0 0 5px;
+      font-size:1.5rem;
+      line-height:1.4;
+      font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+    }
+    .sub{margin:0 0 18px;color:var(--muted);font-size:.9rem}
+
+    /* 4つの入口 */
+    .quick{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    .quick a{
+      min-height:118px;
+      padding:17px 13px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+    }
+    .quick .ico{font-size:1.5rem}
+    .quick strong{display:block;margin-top:6px;font-size:1rem}
+    .quick span{display:block;margin-top:4px;color:var(--muted);font-size:.79rem}
+
+    /* 年表 */
+    .timeline{
+      position:relative;
+      margin:20px 0 0 8px;
+      padding-left:26px;
+      border-left:2px solid var(--gold);
+    }
+    .titem{position:relative;margin:0 0 24px}
+    .titem:before{
+      content:"";
+      position:absolute;
+      left:-33px;top:7px;
+      width:12px;height:12px;
+      border-radius:50%;
+      background:var(--gold);
+      border:3px solid var(--bg);
+    }
+    .year{font-size:.88rem;font-weight:900;color:var(--brown)}
+    .titem h3{margin:.1em 0;font-size:1.03rem}
+    .titem p{margin:.25em 0;color:var(--muted);font-size:.88rem}
+
+    /* カード */
+    .card{
+      margin:12px 0;
+      padding:18px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 4px 16px rgba(63,48,27,.045);
+    }
+    .tag{
+      display:inline-block;
+      padding:4px 9px;
+      border-radius:999px;
+      background:#ece6d8;
+      color:var(--green);
+      font-size:.73rem;
+      font-weight:800;
+    }
+    .card h3{margin:10px 0 6px;font-size:1.04rem;line-height:1.55}
+    .card p{margin:0 0 12px;color:var(--muted);font-size:.88rem}
+    .btn{
+      display:block;
+      width:100%;
+      border:0;
+      border-radius:12px;
+      padding:12px 13px;
+      text-align:center;
+      background:var(--green);
+      color:white;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .btn.secondary{
+      background:transparent;
+      color:var(--green);
+      border:1px solid var(--green);
+    }
+    .btn + .btn{margin-top:8px}
+
+    /* 共通音声プレーヤー */
+    .player{
+      display:none;
+      position:sticky;
+      top:8px;
+      z-index:40;
+      margin:14px 0;
+      padding:13px;
+      background:rgba(255,253,248,.97);
+      backdrop-filter:blur(9px);
+      border:1px solid var(--gold);
+      border-radius:16px;
+      box-shadow:0 10px 28px rgba(0,0,0,.12);
+    }
+    .player.show{display:block}
+    .player-title{margin:0 0 8px;font-size:.9rem;font-weight:900;color:var(--green)}
+    .player audio{width:100%;display:block}
+
+    /* 写真スライダー */
+    .slider{
+      overflow:hidden;
+      background:#151515;
+      border-radius:16px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    .slider-frame{
+      position:relative;
+      aspect-ratio:16/10;
+      background:#222;
+    }
+    .slider-frame img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .slider-controls{
+      display:grid;
+      grid-template-columns:48px 1fr 48px;
+      align-items:center;
+      gap:8px;
+      padding:10px;
+      background:var(--card);
+    }
+    .slider-controls button{
+      width:42px;height:42px;
+      border:1px solid var(--line);
+      border-radius:50%;
+      background:white;
+      color:var(--green);
+      font-size:1.15rem;
+      cursor:pointer;
+    }
+    .slider-count{text-align:center;font-size:.86rem;font-weight:900;color:var(--brown)}
+
+    /* リンク */
+    .external-grid{display:grid;gap:10px}
+    .external{
+      display:block;
+      padding:14px;
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:14px;
+      font-weight:800;
+      box-shadow:0 3px 12px rgba(0,0,0,.035);
+    }
+    .external small{display:block;margin-top:3px;color:var(--muted);font-weight:500}
+
+    .notice{
+      padding:14px 15px;
+      border-left:4px solid var(--gold);
+      border-radius:10px;
+      background:#fffaf0;
+      font-size:.87rem;
+    }
+
+    /* フッター */
+    .footer{
+      margin-top:30px;
+      padding:32px 18px calc(84px + env(safe-area-inset-bottom));
+      background:#263126;
+      color:#ece8dd;
+      font-size:.82rem;
+    }
+    .footer h2{font-size:1.08rem;margin:0 0 10px}
+    .footer p{margin:.45em 0;opacity:.9}
+    .footer a{text-decoration:underline}
+
+    /* モバイル下部ナビ */
+    .bottom-nav{
+      position:fixed;
+      left:0;right:0;bottom:0;
+      z-index:50;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      padding:6px 8px calc(6px + env(safe-area-inset-bottom));
+      background:rgba(255,253,248,.95);
+      backdrop-filter:blur(10px);
+      border-top:1px solid var(--line);
+    }
+    .bottom-nav a{text-align:center;font-size:.71rem;padding:4px 1px}
+    .bottom-nav b{display:block;font-size:1.08rem}
+
+    @media (min-width:700px){
+      .quick{grid-template-columns:repeat(4,1fr)}
+      .bottom-nav{display:none}
+      .footer{padding-bottom:34px}
+      .slider-frame{aspect-ratio:16/9}
+    }
+  </style>
 </head>
+
 <body>
-<div class="top-visual" id="top">
-  <img src="gazo_jyougenji_tpo.png" alt="常源寺・時を超えて ～五百年の歴史と、未来へつなぐ祈り～">
-</div>
-<div class="top-jump">
-  <a href="#menu">見たい内容を選ぶ ↓</a>
-</div>
-<main class="wrap">
-  <section class="intro">
-    <p class="lead">戦国の世から約五百年。常源寺と南相木に受け継がれてきた歴史、祈り、文化を、写真・音声・映像でたどります。</p>
-    <details class="disclosure">
-      <summary>このデジタルアーカイブについて</summary>
-      <p>このサイトは常源寺公式ホームページではなく、開設者個人が資料を収集・整理して制作したものです。歴史資料の一部は、常源寺が昭和63年（1988年）に発行した再建記念誌などを参考・引用しています。</p>
-      <p>一部の画像・音声・会話にはAIを使用し、資料をもとにした再現・演出が含まれます。当時の写真・映像・実際の音声そのものではありません。</p>
-    </details>
-  </section>
-
-  <section class="section" id="menu">
-    <h2>まず、ここから</h2><p class="sub">興味のある項目をタップしてください。</p>
-    <div class="quick">
-      <a href="#timeline"><div class="ico">📜</div><strong>500年の歴史</strong><span>創建から現在まで</span></a>
-      <a href="#aiki"><div class="ico">⚔️</div><strong>相木市兵衛物語</strong><span>戦国期の3つの物語</span></a>
-      <a href="#temple"><div class="ico">🏯</div><strong>伽藍・仏像・寺宝</strong><span>寺院文化を知る</span></a>
-      <a href="#media"><div class="ico">🎧</div><strong>音声・映像</strong><span>聴く・見る・学ぶ</span></a>
-    </div>
-  </section>
-
-  <section class="section" id="timeline">
-    <h2>常源寺 500年の歩み</h2><p class="sub">時代の流れを先に見ると、各資料が分かりやすくなります。</p>
-    <div class="timeline">
-      <div class="titem"><div class="year">戦国時代</div><h3>相木氏と佐久の動乱</h3><p>大井氏との関係、武田氏の進出の中で南相木の歴史が動きます。</p></div>
-      <div class="titem"><div class="year">1550年（天文19年）</div><h3>峰雄山常源寺 創建</h3><p>領主・相木市兵衛常喜公が創建し、節香徳忠禅師を開山として迎えたと伝えられます。</p></div>
-      <div class="titem"><div class="year">1742年（寛保2年）</div><h3>「戌の満水」</h3><p>大洪水の記憶と供養の伝統が、地域に語り継がれています。</p></div>
-      <div class="titem"><div class="year">1988年（昭和63年）</div><h3>再建記念誌の発行</h3><p>常源寺の歴史を後世に伝える重要な資料の一つとなっています。</p></div>
-      <div class="titem"><div class="year">現在</div><h3>祈りと記録を次世代へ</h3><p>写真・音声・映像を通して、地域の歴史と文化をデジタルで伝えます。</p></div>
-    </div>
-  </section>
-
-  <section class="section" id="aiki">
-    <h2>相木市兵衛物語</h2><p class="sub">三つの講話を順番に聴くと、歴史の流れがつながります。</p>
-    <article class="card"><span class="tag">第1話 · 音声講話</span><h3>大井氏の重臣・相木氏の隆盛</h3><p>佐久を支えた相木氏の歩みと、その時代背景。</p><a class="play" href="#">▶ 第1話を聴く</a></article>
-    <article class="card"><span class="tag">第2話 · 音声講話</span><h3>武田支配下の苦渋と南相木の保全</h3><p>郷土の山河と領民を守るために下した決断をたどります。</p><a class="play" href="#">▶ 第2話を聴く</a></article>
-    <article class="card"><span class="tag">第3話 · 音声講話</span><h3>甲府下向と武田信玄への誓約</h3><p>信玄との対話、奉納、そして南相木の平和への歩み。</p><a class="play" href="#">▶ 第3話を聴く</a></article>
-  </section>
-
-  <section class="section" id="temple">
-    <h2>伽藍・仏像・寺宝</h2><p class="sub">建物や尊像に込められた意味を知ります。</p>
-    <article class="card"><span class="tag">資料に基づく解説</span><h3>ご本尊・釈迦牟尼仏と七堂伽藍</h3><p>常源寺の伽藍配置と仏像の意味を紹介。</p><a class="play secondary" href="#">詳しく見る</a></article>
-    <article class="card"><span class="tag">資料に基づく解説</span><h3>金剛力士（仁王様）と山門</h3><p>参道・山門と仁王像に込められた教えを紹介。</p><a class="play secondary" href="#">詳しく見る</a></article>
-  </section>
-
-  <section class="section" id="media">
-    <h2>音声・映像で楽しむ</h2><p class="sub">文字を読まなくても、常源寺の歴史に触れられます。</p>
-    <article class="card"><span class="tag">AI音声による歴史人物再現</span><h3>相木市兵衛が語る「後世の人へ」</h3><p>資料をもとに構成した再現音声です。</p><a class="play" href="#">🎧 音声を聴く</a></article>
-    <article class="card"><span class="tag">テーマソング</span><h3>常源寺・時を越えて</h3><p>五百年の歴史と祈りをテーマにした楽曲。</p><a class="play" href="#">🎵 曲を聴く</a></article>
-    <article class="card"><span class="tag">YouTube</span><h3>常源寺 歴史探訪</h3><p>対談や人物物語を映像でたどります。</p><a class="play" href="#">🎬 動画を見る</a></article>
-    <article class="card"><span class="tag">体験型Web</span><h3>常源寺 歴史・文化クイズ30問</h3><p>楽しみながら歴史を学べます。</p><a class="play secondary" href="#">🧩 クイズに挑戦</a></article>
-  </section>
-
-  <section class="section">
-    <h2>常源寺 写真館</h2><p class="sub">既存の18枚の写真をここに配置する想定です。</p>
-    <div class="photo-grid">
-      <div class="photo-placeholder">写真 1</div><div class="photo-placeholder">写真 2</div><div class="photo-placeholder">写真 3</div><div class="photo-placeholder">写真 4</div>
-    </div>
-    <article class="card"><a class="play secondary" href="#">18枚の写真を見る</a></article>
-  </section>
-
-  <section class="section">
-    <h2>資料について</h2>
-    <div class="notice">📚 <strong>史実・資料とAI再現を区別して表示</strong><br>「資料に基づく解説」「AI音声による再現」「AI生成イメージ」などの表示を各コンテンツに付けると、資料サイトとしての信頼性が高まります。</div>
-    <article class="card"><h3>主な参考資料</h3><p>常源寺再建記念誌（昭和63年）ほか、地域・寺院関係資料。詳細な出典ページを別途設ける構成がおすすめです。</p><a class="play secondary" href="#">出典・参考資料を見る</a></article>
-  </section>
-</main>
-<footer class="footer">
-  <div class="wrap">
-    <h2>常源寺・時を超えて</h2>
-    <p>南相木村 峰雄山常源寺 デジタルアーカイブ</p>
-    <p>常源寺公式サイトではなく、開設者個人による資料整理・紹介サイトです。</p>
-    <p>開設者：中島 義健</p>
-    <p>© Minamiaiki Jogenji Temple Archives.</p>
+  <!--
+    GitHub Pages 用トップ画像
+    index.html と同じフォルダに
+    gazo_jyougenji_taitoru_top.png
+    を置いてください。
+  -->
+  <div class="top-visual" id="top">
+    <img
+      src="./gazo_jyougenji_taitoru_top.png"
+      alt="常源寺・時を超えて ～五百年の歴史と、未来へつなぐ祈り～"
+      onerror="this.onerror=null;this.src='./gazo_jyougenji_1.png';"
+    >
   </div>
-</footer>
-<nav class="bottom-nav" aria-label="モバイルナビ">
-  <a href="#top"><b>⌂</b>トップ</a><a href="#timeline"><b>📜</b>歴史</a><a href="#aiki"><b>⚔️</b>相木氏</a><a href="#media"><b>🎧</b>音声</a>
-</nav>
-</body></html>
+
+  <div class="top-jump">
+    <a href="#menu">見たい内容を選ぶ ↓</a>
+  </div>
+
+  <main class="wrap">
+
+    <section class="intro">
+      <p class="lead">
+        戦国の世から約五百年。常源寺と南相木に受け継がれてきた歴史、祈り、文化を、
+        写真・音声・映像でたどる個人制作のデジタルアーカイブです。
+      </p>
+
+      <details class="disclosure">
+        <summary>このデジタルアーカイブについて</summary>
+        <p>
+          このサイトは常源寺が公式に運営・開設しているホームページではなく、
+          常源寺の歴史と文化を後世に伝えたいという思いから、
+          開設者個人が資料を収集・整理して制作したものです。
+        </p>
+        <p>
+          掲載している歴史資料の一部は、常源寺が昭和63年（1988年）に発行した
+          再建記念誌などを参考・引用しています。
+        </p>
+        <p>
+          一部の画像制作、音声による語りや会話などにはAI（人工知能）を活用しています。
+          AIによる画像や音声表現には、残された資料をもとにした再現・演出が含まれており、
+          当時の写真・映像・実際の音声そのものではありません。
+        </p>
+        <p>
+          本サイトの内容は常源寺の公式見解を示すものではありません。
+          新たな資料の確認などにより、内容を修正する場合があります。
+        </p>
+      </details>
+    </section>
+
+    <!-- 音声再生中だけ表示 -->
+    <div class="player" id="audioPlayerBox">
+      <p class="player-title" id="audioTitle">音声</p>
+      <audio id="audioPlayer" controls preload="metadata"></audio>
+    </div>
+
+    <section class="section" id="menu">
+      <h2>まず、ここから</h2>
+      <p class="sub">興味のある項目をタップしてください。</p>
+      <div class="quick">
+        <a href="#timeline"><div class="ico">📜</div><strong>500年の歴史</strong><span>創建から現在まで</span></a>
+        <a href="#aiki"><div class="ico">⚔️</div><strong>相木市兵衛物語</strong><span>戦国期の三つの物語</span></a>
+        <a href="#temple"><div class="ico">🏯</div><strong>伽藍・仏像・寺宝</strong><span>寺院文化を知る</span></a>
+        <a href="#media"><div class="ico">🎧</div><strong>音声・映像</strong><span>聴く・見る・学ぶ</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="timeline">
+      <h2>常源寺 500年の歩み</h2>
+      <p class="sub">時代の流れを先に見ると、各資料が分かりやすくなります。</p>
+
+      <div class="timeline">
+        <div class="titem">
+          <div class="year">戦国時代</div>
+          <h3>相木氏と佐久の動乱</h3>
+          <p>大井氏との関係、武田氏の進出の中で南相木の歴史が動きます。</p>
+        </div>
+        <div class="titem">
+          <div class="year">1550年（天文19年）</div>
+          <h3>峰雄山常源寺 創建</h3>
+          <p>領主・相木市兵衛常喜公によって創建され、節香徳忠禅師を開山として迎えたと伝えられます。</p>
+        </div>
+        <div class="titem">
+          <div class="year">1742年（寛保2年）</div>
+          <h3>「戌の満水」</h3>
+          <p>大洪水の記憶と供養の伝統が、地域に語り継がれています。</p>
+        </div>
+        <div class="titem">
+          <div class="year">1988年（昭和63年）</div>
+          <h3>再建記念誌の発行</h3>
+          <p>常源寺の歴史を後世に伝える重要な資料の一つです。</p>
+        </div>
+        <div class="titem">
+          <div class="year">現在</div>
+          <h3>祈りと記録を次世代へ</h3>
+          <p>写真・音声・映像を通して、地域の歴史と文化をデジタルで伝えます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="aiki">
+      <h2>相木市兵衛物語</h2>
+      <p class="sub">三つの講話を順番に聴くと、歴史の流れがつながります。</p>
+
+      <article class="card">
+        <span class="tag">AI音声による歴史人物再現</span>
+        <h3>相木市兵衛が語る「後世の人へ」</h3>
+        <p>資料をもとに構成した再現音声です。</p>
+        <button class="btn audio-btn"
+          data-src="./matome_aiki_ichibei_iku.mp3"
+          data-title="相木市兵衛が語る後世の人へ">
+          🎧 音声を聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">第1話・音声講話</span>
+        <h3>大井氏の重臣・相木氏の隆盛</h3>
+        <p>佐久を支えた相木氏の歩みと、その時代背景をたどります。</p>
+        <button class="btn audio-btn"
+          data-src="./matome_ooishi_yakata.mp3"
+          data-title="第一幕　大井氏の重臣・相木氏の隆盛">
+          ▶ 第1話を聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">第2話・音声講話</span>
+        <h3>武田支配下の苦渋と南相木の保全</h3>
+        <p>郷土の山河と領民を守るために下した決断をたどります。</p>
+        <button class="btn audio-btn"
+          data-src="./matome_aikiichibei_yakata.mp3"
+          data-title="第二幕　武田支配下の苦渋と南相木の保全">
+          ▶ 第2話を聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">第3話・音声講話</span>
+        <h3>甲府下向と武田信玄への誓約</h3>
+        <p>信玄との対話、奉納、そして南相木の平和への歩みをたどります。</p>
+        <button class="btn audio-btn"
+          data-src="./matome_kouhu_yakata.mp3"
+          data-title="第三幕　甲府下向と武田信玄への誓約">
+          ▶ 第3話を聴く
+        </button>
+      </article>
+    </section>
+
+    <section class="section" id="temple">
+      <h2>常源寺の歴史・伽藍・仏像</h2>
+      <p class="sub">現在GitHubにある音声ファイルをそのまま利用します。</p>
+
+      <article class="card">
+        <span class="tag">音声解説</span>
+        <h3>常源寺創建と開基・相木市兵衛</h3>
+        <button class="btn audio-btn"
+          data-src="./matome_jyougenji_saiken_kaiki.mp3"
+          data-title="常源寺創建と開基・相木市兵衛">
+          🎧 聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">音声解説</span>
+        <h3>開山・節香徳忠禅師</h3>
+        <button class="btn audio-btn"
+          data-src="./matome_kaizan_sekkan_tokutyu.mp3"
+          data-title="開山・節香徳忠禅師">
+          🎧 聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">音声解説</span>
+        <h3>ご本尊・釈迦牟尼仏と七堂伽藍</h3>
+        <button class="btn audio-btn"
+          data-src="./matome_gohonzon_syakunibutu.mp3"
+          data-title="ご本尊・釈迦牟尼仏と七堂伽藍">
+          🎧 聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">音声解説</span>
+        <h3>文殊菩薩・愛染明王と尊像</h3>
+        <button class="btn audio-btn"
+          data-src="./matome_monjyubosatu_aizomemyouou.mp3"
+          data-title="文殊菩薩・愛染明王と尊像">
+          🎧 聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">音声解説</span>
+        <h3>金剛力士（仁王様）と山門</h3>
+        <button class="btn audio-btn"
+          data-src="./matome_kongourikishi_sanmon.mp3"
+          data-title="金剛力士（仁王様）と山門">
+          🎧 聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">地域史・音声解説</span>
+        <h3>明王寺・常江院の歴史</h3>
+        <button class="btn audio-btn"
+          data-src="./matome_myouji_jyoukouin.mp3"
+          data-title="明王寺・常江院の歴史">
+          🎧 聴く
+        </button>
+      </article>
+    </section>
+
+    <section class="section" id="photos">
+      <h2>常源寺 写真館</h2>
+      <p class="sub">現在GitHubにある18枚の写真を順番に表示します。</p>
+
+      <div class="slider">
+        <div class="slider-frame">
+          <img id="sliderImage" src="./gazo_jyougenji_1.png" alt="常源寺 写真1">
+        </div>
+        <div class="slider-controls">
+          <button type="button" id="prevBtn" aria-label="前の写真">‹</button>
+          <div class="slider-count" id="sliderCount">1 / 18</div>
+          <button type="button" id="nextBtn" aria-label="次の写真">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="media">
+      <h2>音声・映像で楽しむ</h2>
+      <p class="sub">テーマソング、YouTube、クイズなどをまとめています。</p>
+
+      <article class="card">
+        <span class="tag">BGM</span>
+        <h3>常源寺 ～時を越える祈り～</h3>
+        <button class="btn audio-btn"
+          data-src="./music_tokiwo_koeru_inori.mp3"
+          data-title="常源寺 ～時を越える祈り～">
+          🎵 BGMを聴く
+        </button>
+      </article>
+
+      <article class="card">
+        <span class="tag">テーマソング</span>
+        <h3>常源寺・時を越えて</h3>
+        <button class="btn audio-btn"
+          data-src="./music_jyougenji_tokiwokoete.mp3"
+          data-title="常源寺・時を越えて">
+          🎵 曲を聴く
+        </button>
+      </article>
+
+      <div class="external-grid">
+        <a class="external" href="https://www.youtube.com/watch?v=GR1cpj3bo3s" target="_blank" rel="noopener">
+          🎬 常源寺（南相木村）歴史探訪対談
+          <small>YouTubeで開きます</small>
+        </a>
+
+        <a class="external" href="https://www.youtube.com/watch?v=gz16zgcfpAM" target="_blank" rel="noopener">
+          🎬 相木市兵衛物語
+          <small>YouTubeで開きます</small>
+        </a>
+
+        <a class="external" href="https://www.youtube.com/watch?v=mlv8os2n58I" target="_blank" rel="noopener">
+          🎬 常源寺に隠された歴史
+          <small>YouTubeで開きます</small>
+        </a>
+
+        <a class="external" href="https://www.youtube.com/watch?v=wB8TLpjs-Qs" target="_blank" rel="noopener">
+          🎬 戌の満水・江戸時代の大洪水
+          <small>YouTubeで開きます</small>
+        </a>
+
+        <a class="external" href="https://yoshi0213saku-spec.github.io/jyougenji-kuiz77/" target="_blank" rel="noopener">
+          🧩 常源寺 歴史・文化30問クイズ
+          <small>スマートフォン対応のクイズを開きます</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <h2>資料について</h2>
+      <div class="notice">
+        <strong>📚 史実・資料とAI再現を区別しています。</strong><br>
+        一部の画像・音声・会話は、残された資料をもとにAIを活用して再現・演出したものです。
+        当時の写真・映像・実際の音声そのものではありません。
+      </div>
+
+      <article class="card">
+        <span class="tag">主な参考資料</span>
+        <h3>常源寺再建記念誌（昭和63年）ほか</h3>
+        <p>
+          掲載している歴史資料の一部は、常源寺が昭和63年（1988年）に発行した
+          再建記念誌などを参考・引用しています。
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <h2 class="serif">常源寺・時を超えて</h2>
+      <p>南相木村 峰雄山常源寺 デジタルアーカイブ</p>
+      <p>常源寺公式サイトではなく、開設者個人による資料整理・紹介サイトです。</p>
+      <p>開設者：中島 義健</p>
+      <p>お問い合わせ：<a href="mailto:yoshi0213.saku@gmail.com">yoshi0213.saku@gmail.com</a></p>
+      <p>© Minamiaiki Jogenji Temple Archives.</p>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="モバイルナビ">
+    <a href="#top"><b>⌂</b>トップ</a>
+    <a href="#timeline"><b>📜</b>歴史</a>
+    <a href="#aiki"><b>⚔️</b>相木氏</a>
+    <a href="#media"><b>🎧</b>音声</a>
+  </nav>
+
+  <script>
+    // ===== 音声プレーヤー =====
+    const playerBox = document.getElementById('audioPlayerBox');
+    const player = document.getElementById('audioPlayer');
+    const playerTitle = document.getElementById('audioTitle');
+
+    document.querySelectorAll('.audio-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.dataset.src;
+        const title = btn.dataset.title || '音声';
+        playerTitle.textContent = title;
+
+        if (player.getAttribute('src') !== src) {
+          player.src = src;
+        }
+
+        playerBox.classList.add('show');
+
+        player.play().catch(() => {
+          // iPhone等で自動再生が制限された場合は、
+          // 表示されたプレーヤーの再生ボタンを押してください。
+        });
+
+        setTimeout(() => {
+          playerBox.scrollIntoView({behavior:'smooth', block:'nearest'});
+        }, 100);
+      });
+    });
+
+    // ===== 写真18枚スライダー =====
+    const photos = Array.from({length:18}, (_,i) => `./gazo_jyougenji_${i+1}.png`);
+    let photoIndex = 0;
+
+    const sliderImage = document.getElementById('sliderImage');
+    const sliderCount = document.getElementById('sliderCount');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function showPhoto(index){
+      photoIndex = (index + photos.length) % photos.length;
+      sliderImage.src = photos[photoIndex];
+      sliderImage.alt = `常源寺 写真${photoIndex + 1}`;
+      sliderCount.textContent = `${photoIndex + 1} / ${photos.length}`;
+    }
+
+    prevBtn.addEventListener('click', () => showPhoto(photoIndex - 1));
+    nextBtn.addEventListener('click', () => showPhoto(photoIndex + 1));
+
+    // スワイプ操作
+    let startX = 0;
+    sliderImage.addEventListener('touchstart', e => {
+      startX = e.changedTouches[0].clientX;
+    }, {passive:true});
+
+    sliderImage.addEventListener('touchend', e => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+      if (Math.abs(diff) > 45) {
+        if (diff < 0) showPhoto(photoIndex + 1);
+        else showPhoto(photoIndex - 1);
+      }
+    }, {passive:true});
+  </script>
+</body>
+</html>
