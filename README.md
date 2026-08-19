@@ -1,0 +1,1 @@
+# jyougenji_rekishi_gpt
